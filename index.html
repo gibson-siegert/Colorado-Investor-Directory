@@ -846,13 +846,54 @@
 
     /* ─── RESPONSIVE ─────────────────────────────────────────────────── */
     @media (max-width: 768px) {
-      .hero h1 { font-size: 1.4rem; }
-      .stats-grid { grid-template-columns: repeat(2, 1fr); }
-      .firms-grid { grid-template-columns: 1fr; }
-      .header-inner { gap: 0.75rem; }
+      /* Header */
+      header { padding: 0 1rem; }
+      .header-inner { height: 64px; gap: 0.5rem; }
+      .logo-icon { width: 36px; height: 36px; font-size: 18px; }
+      .logo-text strong { font-size: 1rem; }
       .logo-text span { display: none; }
+      .search-wrap { flex: 1; }
+      .search-input { font-size: 0.85rem; padding: 0.5rem 0.85rem 0.5rem 2.2rem; }
+      .search-icon { left: 0.6rem; font-size: 0.85rem; }
       .result-count { display: none; }
+
+      /* Hero */
+      .hero { min-height: calc(85vh - 64px); padding: 2rem 1.25rem 6rem; }
+      .hero h1 { font-size: clamp(1.8rem, 8vw, 2.6rem); }
+      .hero p { font-size: 0.95rem; }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 0.75rem; }
+      .stat-card { padding: 1rem; }
+      .stat-number { font-size: 1.6rem; }
+      .hero-scroll-hint { bottom: 1.5rem; }
+
+      /* Filter bar */
+      .filter-bar { padding: 0.75rem 1rem; top: 64px; }
+      .filter-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+      }
+      .filter-group-left { width: 100%; }
+      .filter-group-right {
+        width: 100%;
+        margin-left: 0;
+        flex-wrap: wrap;
+        gap: 0.4rem;
+      }
+      .filter-chips { flex-wrap: wrap; gap: 0.4rem; }
+      .chip { padding: 5px 12px; font-size: 0.78rem; }
+      .sector-menu { width: 100%; min-width: unset; }
+
+      /* Main grid */
       main { padding: 1rem; }
+      .firms-grid { grid-template-columns: 1fr; }
+      .section-header { padding: 0.75rem 0; }
+    }
+
+    @media (max-width: 400px) {
+      .hero h1 { font-size: 1.6rem; }
+      .stats-grid { grid-template-columns: 1fr 1fr; }
+      .chip { padding: 4px 10px; font-size: 0.74rem; }
     }
   </style>
 </head>
