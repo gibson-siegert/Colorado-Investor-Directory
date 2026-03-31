@@ -193,7 +193,7 @@
       justify-content: center;
       align-items: center;
       text-align: center;
-      padding: 4rem 3rem 0;
+      padding: 4rem 3rem 4rem;
       position: relative;
       overflow: hidden;
     }
@@ -337,15 +337,15 @@
 
     /* ─── TICKER / SCROLLING STATS ────────────────────────────────────── */
     .ticker-wrap {
-      width: 100%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
       background: rgba(0,0,0,0.28);
       border-top: 1px solid rgba(255,255,255,0.1);
       overflow: hidden;
       padding: 0;
-      position: relative;
-      margin-top: auto;
       z-index: 1;
-      /* no ::before / ::after masks — fully edge-to-edge */
     }
 
     .ticker-track {
@@ -1120,14 +1120,14 @@ const firms = [
     sectors: ["Enterprise Software", "Cybersecurity", "SaaS"]
   },
   {
-    name: "Boulder Ventures",
-    stages: ["Seed", "Series A"],
+    name: "Boulder Ventures Ltd.",
+    stages: ["Seed", "Early Stage", "Series A"],
     founded: "1995",
     checkSize: "$1M – $3M",
     aum: "$250M – $500M",
     hq: "Boulder, CO",
-    description: "Boulder Ventures is an early-stage venture capital firm focused on investing in technology and life sciences companies, with a particular emphasis on being the first institutional capital into promising startups. Founded in 1995, the firm has a long history of partnering with founders through the earliest phases of company formation. Hands-on, relationship-driven approach.",
-    portfolio: ["Althea", "Cogent", "Sovrn"],
+    description: "Boulder Ventures is a venture capital firm that invests in the most experienced serial entrepreneurs in technology and life sciences in our two geographies, Boulder and Washington DC. Founded in 1995, Boulder Ventures' investment philosophy is based on three themes: People, Culture, and DPI. Representative investments from its 30-year history include Array BioPharma, Clarabridge, Rally Software, ArcherDX, Playmetrics, and Black Bear Energy.",
+    portfolio: ["Array BioPharma", "Clarabridge", "Rally Software", "ArcherDX", "Playmetrics", "Black Bear Energy"],
     sectors: ["Enterprise Software", "Life Sciences", "Healthcare"]
   },
   {
